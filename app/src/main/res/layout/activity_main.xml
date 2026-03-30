@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#edf0ed"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Attendance"
+        android:textStyle="bold"
+        android:textColor="#141020"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:background="#6750A4"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp">
+
+
+        <TextView
+            android:id="@+id/tvCourseCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="CSE489- section 1"
+            android:textStyle="bold"
+            android:textColor="#46366f"/>
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="Welcome"
+            android:textStyle="bold"
+            android:layout_below="@id/tvCourseCode"
+            android:textColor="#46366f"/>
+
+        <EditText
+            android:id="@+id/etDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="YYYY-MM-DD"
+            android:layout_alignParentRight="true"
+            android:textColor="#141020"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="4dp">
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="S/N"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="#141020"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:text="Student Name"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="#141020"/>
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="A"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="#141020"/>
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="P"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="#141020"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Remarks"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="#141020"/>
+    </LinearLayout>
+
+    <!--       ListView  doesn't add any child but content-->
+    <ListView
+        android:id="@+id/lvAttendance"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#ffffff"
+        android:layout_marginTop="3dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#6750A4">
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#6750A4"
+            android:textColor="#d7d3e3"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Exit"/>
+        <Button
+            android:id="@+id/btnReport"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#6750A4"
+            android:textColor="#d7d3e3"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Report"/>
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#6750A4"
+            android:textColor="#d7d3e3"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Save"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity"
+    android:orientation="vertical">
+
+<!--    Titile-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Signup"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        android:gravity="center"
+        android:background="#6750A4"/>
+
+<!--    Body-->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        android:background="#40CBC3E3">
+
+<!--        First Row (for each row a linear layout-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name:"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+<!--            depend on the OS version, how this option appears-->
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:maxLength="32"
+                android:layout_weight="1"
+                android:focusable="true"/>
+        </TableRow>
+
+<!--        Second Row-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email:"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+            <!--            depend on the OS version, how this option appears-->
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:maxLength="32"
+                android:layout_weight="1"
+                android:focusable="true"/>
+
+        </TableRow>
+
+<!--        Thrid row-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password:"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+            <!--            depend on the OS version, how this option appears-->
+            <EditText
+                android:id="@+id/etPass"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:layout_weight="1"
+                android:focusable="true"/>
+
+        </TableRow>
+
+<!--        4Th Row-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Re-enter Password:"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+            <!--            depend on the OS version, how this option appears-->
+            <EditText
+                android:id="@+id/etRePass"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:layout_weight="1"
+                android:focusable="true"/>
+
+        </TableRow>
+
+        <CheckBox
+            android:id="@+id/cbRemLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remember Login"/>
+        <CheckBox
+            android:id="@+id/cbRemUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remember User"/>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              "/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Already Have Account?"
+                android:textStyle="bold"/>
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log In"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Error Message shown here."
+            android:textColor="#ff0000"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:visibility="gone"/>
+    </TableLayout>
+
+
+
+<!--    Footer-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="4dp"
+        android:padding="4dp">
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Exit"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginRight="3dp"/>
+        <Button
+            android:id="@+id/btnGo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Go"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:layout_marginLeft="3dp"/>
+
+
+    </LinearLayout>
+
+<!-- Layout Width is saying that all empty spce in the layout distribute it
+among its components.-->
+<!-- Now to have equal distribution, having the component width 0
+so they will have euqal distributed of the empty space-->
+<!--    minimum length is not possible to provide as even before entering any input-->
+
+</LinearLayout>
